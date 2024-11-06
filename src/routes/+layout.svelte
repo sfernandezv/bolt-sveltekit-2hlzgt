@@ -1,53 +1,35 @@
 <script>
-	import Header from './Header.svelte';
-	import '../app.css';
+  import '../app.css';
 </script>
 
-<div class="app">
-	<Header />
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
+  <nav class="bg-white/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-xl font-bold text-blue-900">Control App</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a 
+              href="/form1"
+              class="border-transparent text-gray-700 hover:text-blue-900 hover:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
+            >
+              Registro Glaseos
+            </a>
+            <a
+              href="/form2"
+              class="border-transparent text-gray-700 hover:text-blue-900 hover:border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
+            >
+              Inspección en Proceso
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <slot />
+  </main>
 </div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
